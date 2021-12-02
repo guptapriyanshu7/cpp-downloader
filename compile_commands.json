@@ -1,0 +1,34 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-I",
+      "external",
+      "-I",
+      "include",
+      "-o",
+      "build/main.o",
+      "src/main.cpp"
+    ],
+    "directory": "/home/priyanshu/Projects/cpp/cpp-downloader",
+    "file": "/home/priyanshu/Projects/cpp/cpp-downloader/src/main.cpp",
+    "output": "/home/priyanshu/Projects/cpp/cpp-downloader/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-I",
+      "external",
+      "-I",
+      "include",
+      "-o",
+      "build/download.o",
+      "src/download.cpp"
+    ],
+    "directory": "/home/priyanshu/Projects/cpp/cpp-downloader",
+    "file": "/home/priyanshu/Projects/cpp/cpp-downloader/src/download.cpp",
+    "output": "/home/priyanshu/Projects/cpp/cpp-downloader/build/download.o"
+  }
+]

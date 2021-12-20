@@ -6,9 +6,9 @@
 
 #include <filesystem>
 #include <fstream>
+#include <future>
 #include <iostream>
 #include <thread>
-// #include <future>
 
 Download::Download(std::string domain, std::string path, std::string filename)
   : m_domain(domain),
@@ -46,11 +46,12 @@ void Download::start_download() {
 }
 
 void Download::start_process() {
-  std::thread th(&Download::start_download, this);
-  // std::future<void> fut = std::async(&Download::start_download, this);
+  // std::thread th(&Download::start_download, this);
+  // launch on a different thread explicitly
+  // benefit: no need to manage thread on our own
+  auto fut = std::async(std::launch::async, &Download::start_download, this);
   check_progress();
-  // fut.get();
-  th.join();
+  // th.join();
 }
 
 void Download::check_progress() {
